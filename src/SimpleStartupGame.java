@@ -3,7 +3,7 @@ public class SimpleStartupGame {
         var numOfGuesses = 0;
 
         GameHelper helper = new GameHelper();
-        SimpleStartup bot = new SimpleStartup();
+        Startup bot = new Startup();
 
         var randoNum = (int) (Math.random() * 5);
         int[] locations = {randoNum, randoNum + 1, randoNum + 2};

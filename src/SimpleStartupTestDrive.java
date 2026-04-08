@@ -1,7 +1,7 @@
 public class SimpleStartupTestDrive {
     public static void main(String[] args) {
 
-        SimpleStartup dot = new SimpleStartup();
+        Startup dot = new Startup();
 
         int[] locations = {2, 3, 4};
         dot.setLocationCells(locations);
