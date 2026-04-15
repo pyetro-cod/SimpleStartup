@@ -37,10 +37,36 @@ public class StartupBust {
     }
         
 
-    void checkUserGuess() {
+    private void checkUserGuess(String userGuess) {
+        numOfGuesses ++;
+        String result = "miss";
+
+        for (Startup startupToTest : startups){
+            result = startupToTest.checkYourself(userGuess);
+
+            if (result.equals("Kill")){
+                startups.remove(startupToTest);
+                break;
+            }
+            System.out.println(result);
+        }
     }
 
-    void finishGame() {
+    private void finishGame() {
+        System.out.println("All Startupss are dead! Your stock is now worthless");
+        if (numOfGuesses <=18){
+            System.out.println("It only took you " + numOfGuesses + "guesses");
+            System.out.println("You got out before your options sank");
+        } else {
+            System.out.println("Took you long enough. " + numOfGuesses + " guess");
+            System.out.println("Fish are dancing with your options");
+        }
+    }
+
+    public static void main(String[] args) {
+        StartupBust game = new StartupBust();
+        game.setUpGame();
+        game.startPlaying();
     }
 
 }
