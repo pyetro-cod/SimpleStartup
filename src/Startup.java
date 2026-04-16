@@ -3,10 +3,16 @@ import java.util.ArrayList;
 public class Startup {
 
     private ArrayList<String> locationCells;
+    private String name;
+
     private int numOfHits = 0;
 
     public void setLocationCells(ArrayList<String> locationCells) {
         this.locationCells = locationCells;
+    }
+
+    public  void setName(String n){
+        name = n;
     }
 
     public String checkYourself(String userInput) {

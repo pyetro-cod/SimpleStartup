@@ -12,20 +12,20 @@ public class StartupBust {
         one.setName("poniez");
         Startup  two = new Startup();
         two.setName("hacqi");
-        Startup theree = new Startup();
+        Startup theree = new Startup();  // Cria 3 Objetos Startup,lhed fornece nomes e inseri o ArrayList
         theree.setName("cabista");
         startups.add(one);
         startups.add(two);
         startups.add(theree);
 
         System.out.println("Your goal is to sink three Startups.");
-        System.out.println("ponex,hacqi,cabista");
+        System.out.println("ponex,hacqi,cabista");                        // Printa breves intruções para o Usuário
         System.out.println("Try to sink them all in the fewest number of guesses");
 
         for(Startup startup : startups) {
             ArrayList<String> newLocation = gameHelper.placeStartup(3);
-            startup.setLocationCells(newLocation);
-        }
+            startup.setLocationCells(newLocation); // Chama o método setter nesta StarStup para fornecer
+        }                                          // o local que vc acabou de obter do auxiliar;
     }
 
     private void startPlaying() {
