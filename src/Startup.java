@@ -22,9 +22,9 @@ public class Startup {
         if (index >= 0){
             locationCells.remove(index);
             if (locationCells.isEmpty()){
-                result = "kill";
+                result = "Kill";
             } else {
-                result = "hit";
+                result = "Hit";
             }
         }
         return result;
